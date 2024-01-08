@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"net/http"
 )
-
+// adding a test spell error - teh, wree, pish 
 type Api struct {
 	Dal               dal.DAL
 	QueryParamsParser httputil.QueryParamsParser
