@@ -12,6 +12,7 @@ import (
 )
 //ignorence again
 var ignorence string
+var tset int64
 var teh string
 type Api struct {
 	Dal               dal.DAL
