@@ -11,6 +11,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - uses: sobolevn/misspell-fixer-action@master
+    - name: Run misspell and show diffs
+      run: |
+            misspell -error -source=text -locale=en_US vendor > diff_output.txt
+            cat diff_output.txt
+
     - uses: peter-evans/create-pull-request@v5 
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
