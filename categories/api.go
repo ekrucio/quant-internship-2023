@@ -10,10 +10,12 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"net/http"
 )
-//ignorence again
+
+//ignorence .
 var ignorence string
 var tset int64
 var teh string
+
 type Api struct {
 	Dal               dal.DAL
 	QueryParamsParser httputil.QueryParamsParser
@@ -121,7 +123,6 @@ func (api Api) UpdateCategoryByIdHandler(writer http.ResponseWriter, request *ht
 func (api Api) GetCategoriesHandler(writer http.ResponseWriter, request *http.Request) {
 	ctx := request.Context()
 	userID := ctx.Value("userID").(primitive.ObjectID)
-
 
 	userIdFilter := bson.M{
 		"userId": userID,
