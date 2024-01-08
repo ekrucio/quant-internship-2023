@@ -11,7 +11,7 @@ import (
 	"net/http"
 )
 
-//ignorence .
+// ignorence .
 var ignorence string
 var tset int64
 var teh string
