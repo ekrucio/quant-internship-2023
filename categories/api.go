@@ -10,7 +10,8 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"net/http"
 )
-var mitsake string
+//ignorence
+var ignorence string
 var teh string
 type Api struct {
 	Dal               dal.DAL
