@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"net/http"
 )
-//ignorence
+//ignorence again
 var ignorence string
 var teh string
 type Api struct {
