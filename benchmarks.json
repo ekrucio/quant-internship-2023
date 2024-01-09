@@ -1,10 +1,4 @@
 [
-  {
-    "Version": "250e17d1161a44a87d89a464d06345d456fe6338",
-    "Date": 1704797045,
-    "Tags": [
-      "ref=refs/heads/main"
-    ],
-    "Suites": []
-  }
+  {"Version":"eaa0cc1b36f5d6214b2e9172b337ac230fb6319d","Date":1704797784,"Tags":["ref=refs/heads/main"],"Suites":[{"Goos":"linux","Goarch":"amd64","Pkg":"gifmanager-backend/gifs/benchmark_tests","Benchmarks":[{"Name":"BenchmarkGetGifsHandler-4","Runs":4983,"NsPerOp":241541,"Mem":{"BytesPerOp":7262,"AllocsPerOp":78,"MBPerSec":0}}]}]},
+  {"Version":"250e17d1161a44a87d89a464d06345d456fe6338","Date":1704797045,"Tags":["ref=refs/heads/main"],"Suites":[]}
 ]
