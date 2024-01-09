@@ -60,7 +60,7 @@ jobs:
           # Push and deploy GitHub pages branch automatically
           auto-push: true
   slackNotificationZaMisho:
-    needs: benchibench
+    needs: benchmarkV2
     name: Slack Notificationv2
     runs-on: ubuntu-latest
     steps:
