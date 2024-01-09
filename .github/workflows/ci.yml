@@ -35,28 +35,6 @@ jobs:
           SLACK_TITLE: DSK TEST
           SLACK_USERNAME: KOLETO
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-#  runBenchRes:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: checkout
-#        uses: actions/checkout@v4
-#      - name: Set up Go
-#        uses: actions/setup-go@v2
-#        with:
-#          go-version: 1.21.4
-#      - name: mongo-action
-#        uses: DigiPie/mongo-action@v2.0.1
-#      - name: gobenchdata publish
-#        run: go run go.bobheadxi.dev/gobenchdata@v1 action
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.NOT_GITHUB_PERSONAL_ACCESS_TOKEN }}
-#          INPUT_PRUNE_COUNT: 0
-#          INPUT_PUBLISH: true
-#          INPUT_PUBLISH_BRANCH: gh-pages
-#      - name: prepareToCry
-#        run: go install go.bobheadxi.dev/gobenchdata@latest
-#      - name: CryForHelp
-#        run: gobenchdata web generate ./app
   benchmarkV2:
     name: benchibench
     runs-on: ubuntu-latest
@@ -81,3 +59,19 @@ jobs:
           github-token: ${{ secrets.NOT_GITHUB_PERSONAL_ACCESS_TOKEN }}
           # Push and deploy GitHub pages branch automatically
           auto-push: true
+  slackNotificationZaMisho:
+    needs: benchibench
+    name: Slack Notificationv2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Slack Notificationv2
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: quantive-interns-2023
+          SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
+          SLACK_ICON: https://cdn-icons-png.flaticon.com/512/3468/3468447.png
+          SLACK_MESSAGE: ':mihail: МИШО ЦЪКНИ ТУК ПЛС https://ekrucio.github.io/quant-internship-2023/dev/bench/index.html'
+          SLACK_TITLE: KOPONLICHUH
+          SLACK_USERNAME: MoreOtLubov
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
