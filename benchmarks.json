@@ -1,4 +1,5 @@
 [
+  {"Version":"a8b6f716a0a53b76da1b247eb3f2401e0a79fec4","Date":1704798840,"Tags":["ref=refs/heads/main"],"Suites":[{"Goos":"linux","Goarch":"amd64","Pkg":"gifmanager-backend/gifs/benchmark_tests","Benchmarks":[{"Name":"BenchmarkGetGifsHandler-4","Runs":4578,"NsPerOp":249590,"Mem":{"BytesPerOp":7266,"AllocsPerOp":78,"MBPerSec":0}}]}]},
   {"Version":"0a940dbcf1396b6166b69cb2b5713954214dc779","Date":1704798740,"Tags":["ref=refs/heads/main"],"Suites":[{"Goos":"linux","Goarch":"amd64","Pkg":"gifmanager-backend/gifs/benchmark_tests","Benchmarks":[{"Name":"BenchmarkGetGifsHandler-4","Runs":5037,"NsPerOp":242669,"Mem":{"BytesPerOp":7262,"AllocsPerOp":78,"MBPerSec":0}}]}]},
   {"Version":"eaa0cc1b36f5d6214b2e9172b337ac230fb6319d","Date":1704797784,"Tags":["ref=refs/heads/main"],"Suites":[{"Goos":"linux","Goarch":"amd64","Pkg":"gifmanager-backend/gifs/benchmark_tests","Benchmarks":[{"Name":"BenchmarkGetGifsHandler-4","Runs":4983,"NsPerOp":241541,"Mem":{"BytesPerOp":7262,"AllocsPerOp":78,"MBPerSec":0}}]}]},
   {"Version":"250e17d1161a44a87d89a464d06345d456fe6338","Date":1704797045,"Tags":["ref=refs/heads/main"],"Suites":[]}
