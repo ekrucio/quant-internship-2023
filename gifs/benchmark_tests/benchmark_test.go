@@ -30,3 +30,23 @@ func BenchmarkGetGifsHandler(b *testing.B) {
 		api.GetGifsHandler(responseWriter, request)
 	}
 }
+func BenchmarkGetGifs100Handler(b *testing.B) {
+	// Create a mock request for the handler
+	request, err := http.NewRequest(http.MethodGet, "/gifs", nil)
+	requestContext := context.WithValue(context.Background(), "userID", primitive.NewObjectID())
+	request = request.WithContext(requestContext)
+	require.Nil(b, err)
+
+	// Create a writer for the handler
+	responseWriter := httptest.NewRecorder()
+
+	api := gifs.NewGifApi(mongoDal, httputil.NewGifsApiQueryParamParser())
+	// Running the handler in a loop: The loop for i := 0; i < b.N; i++ executes the handler b.N times.
+	// The b.N value increases automatically by the testing framework to get a stable benchmark measurement.
+	for i := 0; i < 10; i++ {
+		for i := 0; i < b.N; i++ {
+			api.GetGifsHandler(responseWriter, request)
+		}
+	}
+
+}

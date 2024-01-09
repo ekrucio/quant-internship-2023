@@ -60,10 +60,13 @@ jobs:
           # Push and deploy GitHub pages branch automatically
           auto-push: true
   slackNotificationZaMisho:
-    needs: benchmarkV2
+    needs: [benchmarkV2,slackNotification]
     name: Slack Notificationv2
     runs-on: ubuntu-latest
     steps:
+      - name: Sleep for 1 minute
+        run: sleep 60s
+        shell: bash
       - uses: actions/checkout@v4
       - name: Slack Notificationv2
         uses: rtCamp/action-slack-notify@v2
@@ -71,7 +74,7 @@ jobs:
           SLACK_CHANNEL: quantive-interns-2023
           SLACK_COLOR: ${{ job.status }} # or a specific color like 'good' or '#ff00ff'
           SLACK_ICON: https://cdn-icons-png.flaticon.com/512/3468/3468447.png
-          SLACK_MESSAGE: ':mihail: МИШО ЦЪКНИ ТУК ПЛС https://ekrucio.github.io/quant-internship-2023/dev/bench/index.html'
+          SLACK_MESSAGE: ':mihail: @Mihail МИШО ЦЪКНИ ТУК ПЛС https://ekrucio.github.io/quant-internship-2023/dev/bench/index.html'
           SLACK_TITLE: KOPONLICHUH
           SLACK_USERNAME: MoreOtLubov
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
