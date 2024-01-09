@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1704800962365,
+  "lastUpdate": 1704801384788,
   "repoUrl": "https://github.com/ekrucio/quant-internship-2023",
   "entries": {
     "My Project Go Benchmark": [
@@ -60,6 +60,42 @@ window.BENCHMARK_DATA = {
             "value": 241245,
             "unit": "ns/op",
             "extra": "4914 times\n4 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "kycenstein@gmail.com",
+            "name": "Krastan Stoyanov",
+            "username": "ekrucio"
+          },
+          "committer": {
+            "email": "kycenstein@gmail.com",
+            "name": "Krastan Stoyanov",
+            "username": "ekrucio"
+          },
+          "distinct": true,
+          "id": "cb16c46f31203d42a1b75d37d04ac6ac59775030",
+          "message": "salfetki za misho + wait",
+          "timestamp": "2024-01-09T13:55:50+02:00",
+          "tree_id": "c4e0b1e6644718c8fd24aacd5bfa30f7075fa4e3",
+          "url": "https://github.com/ekrucio/quant-internship-2023/commit/cb16c46f31203d42a1b75d37d04ac6ac59775030"
+        },
+        "date": 1704801384425,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkGetGifsHandler",
+            "value": 244675,
+            "unit": "ns/op",
+            "extra": "4886 times\n4 procs"
+          },
+          {
+            "name": "BenchmarkGetGifs100Handler",
+            "value": 2432626,
+            "unit": "ns/op",
+            "extra": "488 times\n4 procs"
           }
         ]
       }
